@@ -1,27 +1,2 @@
-# Created by https://www.gitignore.io/api/rails
-
-### Rails ###
-*.rbc
-capybara-*.html
-.rspec
-/log
-!/log/.keep
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system
-/coverage/
-/spec/tmp
-**.orig
-rerun.txt
-pickle-email-*.html
-
-config/initializers/secret_token.rb
-config/secrets.yml
-
-## Environment normalization:
-/.bundle
-/vendor/bundle
-
-# Ignore pow environment settings
-.powenv
+# bin directory ignore
+bin/
