@@ -1,3 +1,3 @@
 import os, sys
 sys.path.append(os.path.dirname(__file__))
-from app import app as application
+from tablr import app as application
