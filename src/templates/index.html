@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{ g.title }}</title>
-</head>
-<body>
-  <a href="tables/flip">Try flipping a table</a><br>
-  <a href="tables/fix">Try fixing a table</a><br>
-<p>On OSX? Try <code>curl http://tables.zambini.xyz/tables/flip | pbcopy</code>
-</body>
+    <head>
+        <title>tablr</title>
+        <style type="text/css">
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+
+            a, a:visited {
+                text-decoration: none;
+                color: #688C73;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            input {
+                height: 30px;
+                font-size: 16px;
+                border-radius: 3px;
+                border: 1px solid #EFECE7;
+                padding: 0 10px;
+            }
+
+            input:focus {
+                outline: none;
+                border: 1px solid #688C73;
+                box-shadow: 0 0 1px #688C73;
+            }
+
+            button {
+                height: 28px;
+                padding: 0 10px;
+                border: none;
+                border-radius: 3px;
+                font-size: 14px;
+                line-height: 28px;
+                color: #FFFFFF;
+                background-color: #688C73;
+            }
+
+            button:focus {
+                outline: none;
+                box-shadow: 0 0 1px 1px #688C73;
+            }
+
+            body {
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+                color: #4E4E4E;
+                background-color: #F9F8F6;
+            }
+
+            .globalHeader {
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                background-color: #688C73;
+            }
+
+            .header-logo {
+                height: 28px;
+                transform: rotate(-180deg) translateX(100%);
+                transition: transform 0.1s 0s ease-out;
+                transform-origin: center right;
+                cursor: default;
+                font-size: 25px;
+            }
+
+            .header-logo:hover {
+                transform: rotate(0deg) translateX(100%);
+                transition: transform 0.1s 0.5s ease-in;
+            }
+
+            .header-info {
+                flex: 1;
+                font-weight: 100;
+                font-size: 20px;
+                text-align: right;
+            }
+
+            .contentBody {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
+            }
+
+            .title {
+                margin: 0;
+                font-size: 70px;
+                font-weight: 300;
+            }
+
+            .code {
+                margin: 10px 0;
+                padding: 8px 20px;
+                border-radius: 5px;
+                font-family: "Menlo", "Monaco", "Consolas", monospace;
+                font-size: 14px;
+                white-space: normal;
+                background-color: #EFECE7;
+            }
+
+            .docs-link {
+                margin: 10px;
+                font-size: 18px;
+            }
+
+            .searchForm {
+                width: 100%;
+                margin: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .searchForm-input {
+                flex: 1;
+                margin-right: 10px;
+            }
+
+            .globalFooter {
+                padding: 0 10px;
+                color: #9C998F;
+                font-size: 13px;
+                line-height: 35px;
+                background-color: #EFECE7;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="globalHeader">
+            <div class="header-logo">┻━┻</div>
+            <div class="header-info">words here</div>
+        </header>
+        <main class="contentBody">
+            <h1 class="title">tablr</h1>
+            <pre class="code">&gt; Do shit with API</pre>
+            <a href="docs" class="docs-link">docs</a>
+            <form class="searchForm">
+                <input type="text" placeholder="search" class="searchForm-input">
+                <button type="submit">go</button>
+            </form>
+        </main>
+        <footer class="globalFooter">built by zambini. design by 🍌</footer>
+    </body>
 </html>
