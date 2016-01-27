@@ -46,7 +46,7 @@ def favicon():
 ### API
 @app.route('/')
 def root():
-    print 'hi'
+    g.url = request.url_root
     return view_index()
 
 

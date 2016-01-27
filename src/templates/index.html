@@ -89,7 +89,7 @@
 
             .contentBody {
                 width: 100%;
-                max-width: 400px;
+                max-width: 450px;
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
@@ -119,6 +119,15 @@
                 font-size: 18px;
             }
 
+	    .docs-image {
+	        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAANVQTFRFAAAAFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWFxUWx8/Z3wAAAEZ0Uk5TAAAIS6nj+xuV77WWw2y+4M1N7hEgEqqH5Oky1Bf83/hYov7x0EMB0kTopLc2tO3qBIlfhZ0fLYgUpss54v2jguHZIeaAb1kGI6AAAAAJcEhZcwAAAEgAAABIAEbJaz4AAADMSURBVBjTPYzpdsFQGEW/c5EgCMkNgpJQ89C0hmqjc533f6ReuuL823uts0UEKpcvWFYhn1MQg7CLJV5XKtqAwC7ztrINUQ4r1Zpbr7u1aoWOkoZHB74OAu3DodeQJtnCJWZqLbIpbYadTHRCtsVit3dlY3pd3hnR15nQfVrichBll2hAV+Lh6H6sJsBEjadkLLP5IvaWK2C13pAPM0keN0/b3R44hOTwOREcX16jVAH6xLf3o6kh+Pj80sD36ec3+K8n6dkH/HOaGP4DqhQacMyU3EIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMDEtMjZUMjM6NDI6MDctMDg6MDBmBYKUAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTA0LTE1VDE0OjUwOjE2LTA3OjAw7t6YJgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=');
+	        width: 16px;
+	        height: 16px;
+	        position: relative;
+	        top: -29px;
+	        right: 31px;
+	    }
+
             .searchForm {
                 width: 100%;
                 margin: 10px;
@@ -143,15 +152,20 @@
     <body>
         <header class="globalHeader">
             <div class="header-logo">┻━┻</div>
-            <div class="header-info">words here</div>
+            <div class="header-info">table flipping at your service</div>
         </header>
         <main class="contentBody">
             <h1 class="title">tablr</h1>
-            <pre class="code">&gt; Do shit with API</pre>
-            <a href="docs" class="docs-link">docs</a>
+            <pre class="code">
+	      <em># Flip some tables<br></em>
+	      &gt; curl {{ g.url }}api/tables/flip<br>
+	      <em># Grab some dongers<br></em>
+	      &gt; curl {{ g.url }}api/dongers
+	    </pre>
+            <a href="https://github.com/randonia/tables_as_a_service" class="docs-link">docs</a><div class="docs-image"></div>
             <form class="searchForm">
-                <input type="text" placeholder="search" class="searchForm-input">
-                <button type="submit">go</button>
+                <input type="text" placeholder="search not ready" class="searchForm-input" disabled="disabled">
+                <button type="submit" disabled="disabled">go</button>
             </form>
         </main>
         <footer class="globalFooter">built by zambini. design by 🍌</footer>
