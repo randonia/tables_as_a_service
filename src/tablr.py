@@ -29,10 +29,6 @@ def load_tables():
     write_data_to_es(data)
 
 
-def log_request(msg):
-    print msg
-
-
 def write_data_to_es(payload):
     print '%s lines' % len(payload)
     es = Elasticsearch()

@@ -29,7 +29,6 @@ def load_config():
 
 @app.before_request
 def before_request():
-    tablr.log_request(request)
     g.es = Elasticsearch()
 
 
