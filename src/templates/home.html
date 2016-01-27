@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block body %}
+<h1 class="title">tablr</h1>
+<pre class="code">
+  <em># Flip some tables<br></em>
+  &gt; curl {{ g.url }}api/tables/flip<br>
+  <em># Grab some dongers<br></em>
+  &gt; curl {{ g.url }}api/dongers
+</pre>
+<a href="https://github.com/randonia/tables_as_a_service" class="docs-link">docs</a><div class="docs-image"></div>
+<form class="searchForm">
+  <input type="text" placeholder="search not ready" class="searchForm-input" disabled="disabled">
+  <button type="submit" disabled="disabled">go</button>
+</form>
+{% endblock %}
