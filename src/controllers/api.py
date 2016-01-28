@@ -61,3 +61,10 @@ def table_fix():
     count = rnd(0, g.es.count(index='emoji', q='key:fix')['count'] - 1)
     result = g.es.search(index='emoji', q='key:fix', from_=count, size=1)
     return render_response(result)
+
+
+@app.route('/dongers/rand')
+def donger_random():
+    count = rnd(0, g.es.count(index='emoji', q='key:random')['count'] - 1)
+    result = g.es.search(index='emoji', q='key:random', from_=count, size=1)
+    return render_response(result)
