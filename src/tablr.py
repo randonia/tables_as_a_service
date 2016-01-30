@@ -7,6 +7,7 @@ from flask import (Flask, request, session, g, redirect, url_for, abort,
 
 from app import app
 import controllers.api
+import controllers.admin
 
 ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(os.path.dirname(__file__))
@@ -55,6 +56,4 @@ def list_routes():
 
 
 if __name__ == '__main__':
-    list_routes()
-    load_tables()
     app.run(host='0.0.0.0')

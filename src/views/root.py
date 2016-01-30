@@ -1,7 +1,8 @@
-from flask import (request, g, render_template, jsonify as to_js)
+from flask import (request, g, render_template, jsonify as to_json)
 
 __all__ = (
     'render_response',
+    'render_status',
     'view_index',
     )
 
@@ -17,3 +18,9 @@ def render_response(result):
     """
     # This definitely needs to be less awful
     return result['hits']['hits'][0]['_source']['text']
+
+
+def render_status(status_code, message, opts={}):
+    response = {'status': status_code, 'message': message}
+    response.update(opts)
+    return to_json(response)

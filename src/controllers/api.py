@@ -1,14 +1,9 @@
+import json
 import os
 from random import randint as rnd
 
 from elasticsearch import Elasticsearch
-from flask import (request, g, send_from_directory)
-
-__all__ = (
-    'root',
-    'table_flip',
-    'table_fix'
-    )
+from flask import (abort, request, g, send_from_directory)
 
 from app import app
 import tablr
@@ -20,16 +15,30 @@ config = {}
 @app.before_first_request
 def initialize():
     load_config()
-    tablr.load_tables()
 
 
 def load_config():
-    pass
+    tokens_file = open('authorized_users.json', 'r')
+    tokens = json.load(tokens_file)
+    config['AUTHORIZED_TOKENS'] = tokens
 
 
 @app.before_request
 def before_request():
     g.es = Elasticsearch()
+    g.auth = user_authorized(request.headers.get('DongrAuth', None))
+
+
+def user_authorized(token):
+    if '/admin/' in request.path and token is None:
+        abort(403)
+    # Check token here
+    return token in map(lambda entry: entry['token'],
+                        config['AUTHORIZED_TOKENS']['admin'])
+
+
+def get_user_by_token(token):
+    return
 
 
 @app.teardown_request
