@@ -1,0 +1,26 @@
+{
+  "name": "tables_as_a_service",
+  "version": "1.0.0",
+  "description": "Table flipping at your service",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "serve": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randonia/tables_as_a_service.git"
+  },
+  "author": "Ryan Andonian",
+  "bugs": {
+    "url": "https://github.com/randonia/tables_as_a_service/issues"
+  },
+  "homepage": "https://github.com/randonia/tables_as_a_service#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

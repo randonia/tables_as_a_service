@@ -1,14 +1,21 @@
-# Table (flip) As A Service #
+# Tables As A Service #
+> Table flipping and dongers at your service
 
-Populate your tables with `src/tables/seed_data`
+## What is this? ##
+
+A silly thing to get faces from the command line
 
 ## Available Routes ##
 
-    GET /tables/flip
-    GET /tables/fix
-    GET /dongers/rand
+    GET /api/tables/flip
+    GET /api/tables/fix
+    GET /api/dongers/rand
 
-WIP
+## "Tech" ##
 
-Feel free to create a Pull Request for more faces. Or tweet at me
-[@zambini845](https://twitter.com/Zambini845) with all the faces
+* Nodejs
+* Express
+
+
+Want more faces? Feel free to create a Pull Request for more faces. Or tweet at me
+[@zambini845](https://twitter.com/Zambini845). Or fork it.
