@@ -10,6 +10,8 @@ A silly thing to get faces from the command line
     GET /api/tables/flip
     GET /api/tables/fix
     GET /api/dongers/rand
+    GET /api/shittify/:phrase
+    GET /api/tinify/:phrase
 
 ## Launch ##
 

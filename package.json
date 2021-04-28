@@ -1,6 +1,6 @@
 {
   "name": "tables_as_a_service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Table flipping at your service",
   "main": "index.js",
   "scripts": {
