@@ -24,7 +24,6 @@ function shittify(input) {
     return 'no';
   }
   const result = input.split('').map(char => {
-    console.log('Testing char=%s', char);
     if (char.match(/[a-zA-Z0-9]/)) {
       return `:${char.toLowerCase()}_:`;
     }
