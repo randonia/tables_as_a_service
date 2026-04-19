@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/randonia/tables_as_a_service#readme",
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^3.1.14"
   },
   "dependencies": {
     "express": "^4.17.1"

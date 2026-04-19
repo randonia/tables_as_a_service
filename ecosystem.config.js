@@ -8,7 +8,7 @@ module.exports = {
       watch: true,
       env: {
         PORT: 18888,
-        NODE_ENV: 'development',
+        NODE_ENV: 'production',
       },
     },
   ],
